@@ -1,4 +1,4 @@
-function pay() {
+function pay(){
   alert("Payment Successful (Demo)");
-  location.href = "home.html";
+  location.href="home.html";
 }
