@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book OP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="card">
+  <h3>OP Registration</h3>
+
+  <input id="name" placeholder="Full Name">
+  <input id="email" placeholder="Email">
+  <input id="phone" placeholder="Phone">
+  <textarea id="address" placeholder="Address"></textarea>
+
+  <p>Digital Signature</p>
+  <canvas id="sign" width="250" height="120"></canvas>
+  <button onclick="clearSign()">Clear</button>
+
+  <button onclick="submitOP()">Proceed to Payment</button>
+</div>
+
+<script src="js/op.js"></script>
+</body>
+</html>
