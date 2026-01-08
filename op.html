@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Book OP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OP Booking | Smart Virtual Platform</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-body">
 
-<div class="card">
+<div class="card op-card">
   <h3>OP Registration</h3>
 
   <input id="name" placeholder="Full Name">
@@ -15,9 +16,9 @@
   <input id="phone" placeholder="Phone">
   <textarea id="address" placeholder="Address"></textarea>
 
-  <p>Digital Signature</p>
-  <canvas id="sign" width="250" height="120"></canvas>
-  <button onclick="clearSign()">Clear</button>
+  <p>Digital Signature:</p>
+  <canvas id="sign" width="300" height="120"></canvas>
+  <button onclick="clearSign()">Clear Signature</button>
 
   <button onclick="submitOP()">Proceed to Payment</button>
 </div>
