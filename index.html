@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Smart Virtual Platform</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="login-body">
 
-<div class="card">
+<div class="card login-card">
   <h2>Login</h2>
-  <input id="phone" placeholder="Phone Number">
-  <button onclick="sendOTP()">Request OTP</button>
+  
+  <div id="phoneBox">
+    <input type="tel" id="phone" placeholder="Enter Phone Number">
+    <button onclick="sendOTP()">Request OTP</button>
+  </div>
 
   <div id="otpBox" class="hidden">
-    <input id="otp" placeholder="Enter OTP">
+    <input type="number" id="otp" placeholder="Enter OTP">
     <button onclick="verifyOTP()">Verify OTP</button>
   </div>
 
   <div id="pinBox" class="hidden">
-    <input id="pin" placeholder="Create 4-digit PIN">
+    <input type="password" id="pin" placeholder="Create 4-digit PIN">
     <button onclick="setPIN()">Login</button>
   </div>
 </div>
