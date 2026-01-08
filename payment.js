@@ -1,30 +1,32 @@
-// payment.js
+// Wait until DOM loads
+document.addEventListener("DOMContentLoaded", function () {
+    const cardBtn = document.getElementById("cardPayBtn");
+    const phonepeBtn = document.getElementById("phonepePay");
 
-function pay() {
-    // Get input fields
-    const cardInputs = document.querySelectorAll("input");
-    
-    // If using Card payment, validate at least some input
-    let cardValid = false;
-    cardInputs.forEach(input => {
-        if (input.value.trim() !== "") cardValid = true;
+    cardBtn.addEventListener("click", function () {
+        const card = document.getElementById("cardNumber").value.trim();
+        const expiry = document.getElementById("expiry").value.trim();
+        const cvv = document.getElementById("cvv").value.trim();
+
+        if (!card || !expiry || !cvv) {
+            alert("Please fill all card details!");
+            return;
+        }
+
+        alert("Processing Card Payment...");
+        setTimeout(() => {
+            alert("Card Payment Successful! ✅");
+            localStorage.setItem("paymentDone", "true");
+            location.href = "home.html";
+        }, 1500);
     });
 
-    if (!cardValid) {
-        alert("Please fill at least one payment field or click PhonePe image.");
-        return;
-    }
-
-    // Simulate payment process
-    const paymentType = event?.target?.tagName === "IMG" ? "PhonePe" : "Card";
-
-    // Show processing
-    alert(`${paymentType} Payment Processing...`);
-
-    // Fake delay to simulate real payment
-    setTimeout(() => {
-        alert(`${paymentType} Payment Successful!`);
-        localStorage.setItem("paymentDone", "true"); // optional state
-        location.href = "home.html"; // redirect to dashboard
-    }, 1500);
-}
+    phonepeBtn.addEventListener("click", function () {
+        alert("Redirecting to PhonePe...");
+        setTimeout(() => {
+            alert("PhonePe Payment Successful! ✅");
+            localStorage.setItem("paymentDone", "true");
+            location.href = "home.html";
+        }, 1500);
+    });
+});
