@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Payment</title>
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Payment | Smart Virtual Platform</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-body">
 
-<div class="card">
+<div class="card payment-card">
   <h3>Payment</h3>
-
+  <input placeholder="Card Number">
+  <input placeholder="Expiry MM/YY">
+  <input placeholder="CVV">
   <button onclick="pay()">Pay via Card</button>
-  <img src="images/phonepe.png" onclick="pay()" width="150">
-
+  <p>OR</p>
+  <img src="images/phonepe.png" onclick="pay()" width="150" style="cursor:pointer;">
 </div>
 
 <script src="js/payment.js"></script>
