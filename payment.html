@@ -10,12 +10,16 @@
 
 <div class="card payment-card">
   <h3>Payment</h3>
-  <input placeholder="Card Number">
-  <input placeholder="Expiry MM/YY">
-  <input placeholder="CVV">
-  <button onclick="pay()">Pay via Card</button>
-  <p>OR</p>
-  <img src="images/phonepe.png" onclick="pay()" width="150" style="cursor:pointer;">
+
+  <p>Card Payment (Demo)</p>
+  <input type="text" id="cardNumber" placeholder="Card Number">
+  <input type="text" id="expiry" placeholder="Expiry MM/YY">
+  <input type="text" id="cvv" placeholder="CVV">
+  <button id="cardPayBtn">Pay via Card</button>
+
+  <p style="margin:15px 0;">OR</p>
+
+  <img src="images/phonepe.png" id="phonepePay" width="150" style="cursor:pointer;" alt="PhonePe">
 </div>
 
 <script src="js/payment.js"></script>
