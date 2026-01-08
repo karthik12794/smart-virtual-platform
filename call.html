@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Request Call | Smart Virtual Platform</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,18 +10,24 @@
 
 <div class="card call-card">
   <h3>Request Call</h3>
+
+  <label for="recipient">Select Recipient:</label>
   <select id="recipient">
-    <option>Doctor</option>
-    <option>Bank Manager</option>
-    <option>Cashier</option>
+    <option value="">--Choose Recipient--</option>
+    <option value="Doctor">Doctor</option>
+    <option value="Bank Manager">Bank Manager</option>
+    <option value="Cashier">Cashier</option>
   </select>
 
+  <label for="callType">Select Call Type:</label>
   <select id="callType">
-    <option>Audio Call</option>
-    <option>Video Call</option>
+    <option value="">--Choose Call Type--</option>
+    <option value="Audio Call">Audio Call</option>
+    <option value="Video Call">Video Call</option>
   </select>
 
-  <button onclick="requestCall()">Request Call</button>
+  <button id="requestBtn">Request Call</button>
+
   <p id="status"></p>
 </div>
 
